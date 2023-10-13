@@ -1,0 +1,11 @@
+{% extends 'homepage.html' %}
+
+{%block content%}
+<h1>Toutes les personnes</h1>
+<ul>
+    {% for personne in personnes %}
+        <li>{{ personne.prenom }} {{ personne.nom_de_famille }} - Date de naissance : {{ personne.date_de_naissance }}</li>
+        <!-- Ajoutez d'autres détails si nécessaire -->
+    {% endfor %}
+</ul>
+{% endblock contentn %}

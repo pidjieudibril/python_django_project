@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {{ page_title|default:"Homepage" }}
+        {% endblock title %}
+    </title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    {% block content %}
+       <p>je suis un pragraphe</p>
+    {% endblock content %}
+</body>
+</html>>

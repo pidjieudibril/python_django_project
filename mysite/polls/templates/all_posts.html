@@ -1,0 +1,21 @@
+{% extends 'homepage.html' %}
+
+    {% block title %}
+    {{ page_title|default:"Homepage" }}
+    {% endblock title %}
+
+    {% block content %}
+    {{ block.super }} 
+    <h1>Toutes les publications</h1>
+    <ul>
+        {% for publication in publications %}
+            <li>
+                <a href="{% url 'afficher_publication' publication.id %}">{{ publication.titre }} by {{publication.auteur}}</a>
+            
+            <span>{{ publication.date_de_publication | date:"D M Y" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+       
+        {% endfor %} 
+    {% endblock content %}
