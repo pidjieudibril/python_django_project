@@ -11,7 +11,7 @@
     <ul>
         {% for publication in publications %}
             <li>
-                <a href="{% url 'afficher_publication' publications.publication_id %}">{{ publication.titre }} by {{publication.auteur}}</a>
+                <a href="{% url 'afficher_publication' publication.pk %}">{{ publication.titre }} by {{publication.auteur}}</a>
             
             <span>{{ publication.date_de_publication | date:"D M Y" }}</span>
         </li>

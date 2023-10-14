@@ -1,10 +1,13 @@
-
-
-    {% extends 'homepage.html' %}
+{% extends 'homepage.html' %}
 
 {% block content %}
-<h1>Détails de la personne</h1>
-<p>Prénom : {{ personne.prenom }}</p>
-<p>Nom de famille : {{ personne.nom_de_famille }}</p>
-<p>Date de naissance : {{ personne.date_de_naissance }}</p>
+
+<h1>Détails sur une publication de  {{publication.auteur}} </h1>
+<p>titre de la publication  : {{ publication.titre }}</p>
+<p> categorie de la publication {{ publication.categorie }} </p>
+<p>description de la publication  : {{ publication.texte }}</p>
+<p>date de la publication  : {{ publication.date_de_publication }}</p>
+<p> auteur de la publication  {{publication.auteur}}</p>
+
+<p><a href="{% url 'afficher_toutes_publications' %}"> retourner a tout les publication </a></p>
 {% endblock %}

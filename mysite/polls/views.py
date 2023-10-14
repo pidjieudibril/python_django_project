@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 
 from .models import Person, Post # import the models from polls/models.py
 def index (request):
@@ -6,7 +6,7 @@ def index (request):
 # afficher une personne 
 
 def afficher_personne(request, personne_id):
-    personne = Person.objects.get(Person, pk=personne_id)
+    personne = get_object_or_404(Person, pk=personne_id)
     return render(request, 'personne.html', {'personne': personne})
 
 # afficher toutes les personne 
@@ -16,7 +16,7 @@ def afficher_toutes_personnes(request):
 
 #afficher publication 
 def afficher_publication(request, publication_id):
-    publication = Post.objects.get(Post, pk=publication_id)
+    publication = get_object_or_404(Post, pk=publication_id)
     return render(request, 'posts.html', {'publication': publication})
 
 #afficher toutes les publication 

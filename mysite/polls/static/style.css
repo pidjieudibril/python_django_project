@@ -1,9 +1,15 @@
 body {
+    background-image: url('bg.jpg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image d'arrière-plan */
     background-color: #000;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 0.9em;
     text-align: justify;
     
+    /* Opacité de 0.5 (50%) */
+    opacity: 0.5;
+    
+    /* Garantit que l'image couvre l'arrière-plan */
+    background-size: cover;
 }
 
 h1 {
@@ -42,7 +48,10 @@ nav{
     }
     
     .container{
-        margin-top: 100px;
+        margin: 172px;
+        background-color: #fff;
+        padding: 30px;
+        width: 50%;
     }
 
     footer { background: rgb(16, 5, 5);height: 50px;
@@ -54,6 +63,8 @@ margin-top: 10px;}
 
     footer .container1{
         margin-top: 10px;
+        text-align: center;
+      
     }
 
     .monh1{

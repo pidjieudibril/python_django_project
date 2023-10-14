@@ -1,8 +1,17 @@
 {% extends 'homepage.html' %}
 
+
 {% block content %}
+
 <h1>Détails de la personne</h1>
 <p>Prénom : {{ personne.prenom }}</p>
 <p>Nom de famille : {{ personne.nom_de_famille }}</p>
 <p>Date de naissance : {{ personne.date_de_naissance }}</p>
+<p> as tu un animal de compagnie ? {{personne.a_un_animal_de_compagnie}}</p>
+ 
+{% if personne.official_homepage %}
+ <li><a href="{{ personne.official_homepage }}">{{ personne.official_homepage }}</a></li>
+ {% endif %}
+
+ <p><a href="{% url 'afficher_toutes_personnes' %}"> retourner a tout les personnes</a></p>
 {% endblock %}

@@ -8,7 +8,7 @@
 <h1>Toutes les personnes</h1>
 <ul>
     {% for personne in personnes %}
-    <li><a href="{% url 'afficher_personne' personnes.personne_id  %}"> {{ personne.prenom }} {{ personne.nom_de_famille }}</a></li>
+    <li><a href="{% url 'afficher_personne' personne.pk  %}"> {{ personne.prenom }} {{ personne.nom_de_famille }}</a></li>
        
         
     {% endfor %}
