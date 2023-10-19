@@ -1,5 +1,9 @@
 {% extends 'homepage.html' %}
 
+
+{% block title %}
+{{ page_title|default:"detailPost" }}
+{% endblock title %}
 {% block content %}
 
 <h1>Détails sur une publication de  {{publication.auteur}} </h1>
